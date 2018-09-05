@@ -20,15 +20,19 @@ public class App {
     }
 
     /**
-     * This bean overrides the default name set in the Importer's constructor.
-     * Except if null is returned then the default is used.
-     * @return
+     * This bean overrides
+     *  the wired object created by the Importer's constructor
+     *  the @Component instance created for Wired
+     *
+     * But if null is returned here then the Importer's constructor instance is used.
+     * i.e. null overrides the instance created via Wired's @Component
      */
     @Bean
     public Wired wired() {
         Wired wired = new Wired();
         wired.setName("Bean");
         return wired;
+//        return null;
     }
 
 }
