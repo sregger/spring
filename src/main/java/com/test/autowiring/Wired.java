@@ -1,15 +1,14 @@
 package com.test.autowiring;
 
-import org.springframework.stereotype.Component;
-
 /**
  * Basic Bean with a configurable name.
  */
-@Component
+// Disabling @Component to use @Bean which allows me to define a null
+//@Component
 public class Wired {
 
     // Default name given to the Component when it is constructed
-    private String name = "Autowired";
+    private String name = "Default";
 
     public void setName(String name) {
         this.name = name;
