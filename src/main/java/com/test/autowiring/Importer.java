@@ -1,6 +1,7 @@
 package com.test.autowiring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
  * Turns out Spring overrides the object created by the Java lifecycle.
  */
 @Component
+@Scope("prototype")
 public class Importer {
 
     @Autowired

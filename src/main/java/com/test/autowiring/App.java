@@ -17,6 +17,10 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
         Importer importer = context.getBean(Importer.class);
         importer.sayHello();
+
+        // Test out prototype scope
+        Importer importer2 = context.getBean(Importer.class);
+        Importer importer3 = context.getBean(Importer.class);
     }
 
     /**

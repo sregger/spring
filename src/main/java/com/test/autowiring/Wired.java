@@ -9,7 +9,11 @@ import org.springframework.stereotype.Component;
 public class Wired {
 
     // Default name given to the Component when it is constructed
-    private String name = "Default";
+    private String name;
+
+    public Wired() {
+        this.name = "Default";
+    }
 
     public void setName(String name) {
         this.name = name;
